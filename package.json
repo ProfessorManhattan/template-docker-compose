@@ -99,7 +99,10 @@
     },
     "slug": "template-docker-compose",
     "subgroup": "docker-compose",
-    "title": "Instructions / Template for Docker Compose Project"
+    "title": "Instructions / Template for Docker Compose Project",
+    "github_id": "R_kgDOHOUHrA",
+    "gitlab_project_id": "35586793",
+    "gitlab_group_id": "11579735"
   },
   "changelog": {
     "displayTypes": [
