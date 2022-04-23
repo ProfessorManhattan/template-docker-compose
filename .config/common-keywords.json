@@ -1,12 +1,15 @@
 {
   "keywords": [
-    "app",
+    "compose",
     "container",
     "docker",
+    "docker-compose",
+    "docker-stack",
     "dockerfile",
     "mblabs",
     "megabytelabs",
     "professormanhattan",
+    "stack",
     "virtualization",
     "washingtondc"
   ]

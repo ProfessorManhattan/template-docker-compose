@@ -1,92 +1,106 @@
-# Docker Compose
+<!-- ⚠️ This README has been generated from the file(s) ".config/docs/blueprint-readme-docker-compose.md" ⚠️-->{{ load:.config/docs/readme/header.md }}
+<div align="center">
+  <a href="https://megabyte.space" title="Megabyte Labs homepage" target="_blank">
+    <img alt="Homepage" src="https://img.shields.io/website?down_color=%23FF4136&down_message=Down&label=Homepage&logo=home-assistant&logoColor=white&up_color=%232ECC40&up_message=Up&url=https%3A%2F%2Fmegabyte.space&style=for-the-badge" />
+  </a>
+  <a href="https://github.com/megabyte-labs/template-docker-compose/blob/master/docs/CONTRIBUTING.md" title="Learn about contributing" target="_blank">
+    <img alt="Contributing" src="https://img.shields.io/badge/Contributing-Guide-0074D9?logo=github-sponsors&logoColor=white&style=for-the-badge" />
+  </a>
+  <a href="https://app.slack.com/client/T01ABCG4NK1/C01NN74H0LW/details/" title="Chat with us on Slack" target="_blank">
+    <img alt="Slack" src="https://img.shields.io/badge/Slack-Chat-e01e5a?logo=slack&logoColor=white&style=for-the-badge" />
+  </a>
+  <a href="https://gitter.im/megabyte-labs/community" title="Chat with the community on Gitter" target="_blank">
+    <img alt="Gitter" src="https://img.shields.io/gitter/room/megabyte-labs/community?logo=gitter&logoColor=white&style=for-the-badge" />
+  </a>
+  <a href="https://github.com/megabyte-labs/template-docker-compose" title="GitHub mirror" target="_blank">
+    <img alt="GitHub" src="https://img.shields.io/badge/Mirror-GitHub-333333?logo=github&style=for-the-badge" />
+  </a>
+  <a href="https://gitlab.com/megabyte-labs/templates/docker-compose" title="GitLab repository" target="_blank">
+    <img alt="GitLab" src="https://img.shields.io/badge/Repo-GitLab-fc6d26?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgAQMAAABJtOi3AAAABlBMVEUAAAD///+l2Z/dAAAAAXRSTlMAQObYZgAAAHJJREFUCNdNxKENwzAQQNEfWU1ZPUF1cxR5lYxQqQMkLEsUdIxCM7PMkMgLGB6wopxkYvAeI0xdHkqXgCLL0Beiqy2CmUIdeYs+WioqVF9C6/RlZvblRNZD8etRuKe843KKkBPw2azX13r+rdvPctEaFi4NVzAN2FhJMQAAAABJRU5ErkJggg==&style=for-the-badge" />
+  </a>
+</div>
+<br/>
+<div align="center">
+  <a title="Version: 8.11.0" href="https://github.com/megabyte-labs/template-docker-compose" target="_blank">
+    <img alt="Version: 8.11.0" src="https://img.shields.io/badge/version-8.11.0-blue.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgAQMAAABJtOi3AAAABlBMVEUAAAD///+l2Z/dAAAAAXRSTlMAQObYZgAAACNJREFUCNdjIACY//+BEp9hhM3hAzYQwoBIAqEDYQrCZLwAAGlFKxU1nF9cAAAAAElFTkSuQmCC&cacheSeconds=2592000&style=flat-square" />
+  </a>
+  <a title="GitLab build status" href="https://gitlab.com/megabyte-labs/templates/docker-compose/-/commits/master" target="_blank">
+    <img alt="Build status" src="https://img.shields.io/gitlab/pipeline-status/megabyte-labs/docker/docker-compose/template-docker-compose?branch=master&label=build&logo=gitlab&logoColor=white&style=flat-square">
+  </a>
+  <a title="DockerHub image size" href="https://hub.docker.com/repository/docker/megabytelabs/template-docker-compose" target="_blank">
+    <img alt="Image size" src="https://img.shields.io/docker/image-size/megabytelabs/template-docker-compose?logo=docker&sort=date&logoColor=white&style=flat-square">
+  </a>
+  <a title="DockerHub pulls" href="https://hub.docker.com/repository/docker/megabytelabs/template-docker-compose" target="_blank">
+    <img alt="Pulls" src="https://img.shields.io/docker/pulls/megabytelabs/template-docker-compose?logo=docker&logoColor=white&style=flat-square">
+  </a>
+  <a title="DockerHub stars" href="https://hub.docker.com/repository/docker/megabytelabs/template-docker-compose" target="_blank">
+    <img alt="Stars" src="https://img.shields.io/docker/stars/megabytelabs/template-docker-compose?logo=docker&logoColor=white&style=flat-square">
+  </a>
+  <a title="Documentation" href="https://megabyte.space/docs/docker" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg?logo=readthedocs&logoColor=white&style=flat-square" />
+  </a>
+  <a title="License: MIT" href="https://github.com/megabyte-labs/template-docker-compose/blob/master/LICENSE" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgAQMAAABJtOi3AAAABlBMVEUAAAD///+l2Z/dAAAAAXRSTlMAQObYZgAAAHpJREFUCNdjYOD/wMDAUP+PgYHxhzwDA/MB5gMM7AwMDxj4GBgKGGQYGCyAEEgbMDDwAAWAwmk8958xpIOI5zKH2RmOyhxmZjguAiKmgIgtQOIYmFgCIp4AlaQ9OczGkJYCJEAGgI0CGwo2HmwR2Eqw5SBnNIAdBHYaAJb6KLM15W/CAAAAAElFTkSuQmCC&style=flat-square" />
+  </a>
+</div>
 
+> </br><h4 align="center">**Starting point / instructions for creating a Docker Compose / Stack repository**</h4></br>
 
+<a href="#table-of-contents" style="width:100%"><img style="width:100%" src="https://gitlab.com/megabyte-labs/assets/-/raw/master/png/aqua-divider.png" /></a>
 
-## Getting started
+## Table of Contents
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+- [Requirements](#requirements)
+  - [Development Requirements](#development-requirements)
+- [Docker Compose / Stack Project](#docker-compose--stack-project)
+  _ [Docker Containers](#docker-containers)
+  _ [Configuration Management](#configuration-management) \* [Re-Building the Repository](#re-building-the-repository)
+  {{ load:.config/docs/readme-docker-compose/overview.md }}
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+<a href="#requirements" style="width:100%"><img style="width:100%" src="https://gitlab.com/megabyte-labs/assets/-/raw/master/png/aqua-divider.png" /></a>
 
-## Add your files
+## Requirements
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+- **[Docker](https://gitlab.com/megabyte-labs/ansible-roles/docker)**
 
-```
-cd existing_repo
-git remote add origin https://gitlab.com/megabyte-labs/templates/docker-compose.git
-git branch -M master
-git push -uf origin master
-```
+### Development Requirements
 
-## Integrate with your tools
+- **[DockerSlim](repository.project.dockerslim)** - Used for generating compact, secure images
+- **[jq](repository.project.jq)** - Used for interacting with JSON
+- **[Node.js](repository.project.node)** (_>=14.18_) - Utilized to add development features like a pre-commit hook and maintenance tasks
+- _Many more_ requirements that are _dynamically installed_ as they are needed by our `Taskfile.yml` via our custom [go-task/task](https://github.com/go-task/task) fork named **[Bodega](https://github.com/ProfessorManhattan/Bodega)**
 
-- [ ] [Set up project integrations](https://gitlab.com/megabyte-labs/templates/docker-compose/-/settings/integrations)
+If you choose to utilize the development tools provided by this project then at some point you will have to run `bash start.sh` (or `npm i` which calls `bash start.sh` after it is done). The `start.sh` script will attempt to automatically install any requirements (without sudo) that are not already present on your build system to the user's `~/.local/bin` folder. The `start.sh` script also takes care of other tasks such as generating the documentation by calling tasks defined in the `Taskfile.yml`. For more details on how the optional requirements are used and set up, check out the [CONTRIBUTING.md](https://gitlab.com/megabyte-labs/docker/docker-compose/template-docker-compose/-/blob/master/docs/CONTRIBUTING.md) guide.
 
-## Collaborate with your team
+When you are ready to start development, run `task --menu` to open an interactive dialog that will help you understand what build commands we have already engineered for you.
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+<a href="#docker-compose--stack-project" style="width:100%"><img style="width:100%" src="https://gitlab.com/megabyte-labs/assets/-/raw/master/png/aqua-divider.png" /></a>
 
-## Test and Deploy
+## Docker Compose / Stack Project
 
-Use the built-in continuous integration in GitLab.
+We house most of our Docker Compose / Stack configurations in our [Ansible Docker Swarm role](https://github.com/megabyte-labs/ansible-swarm). However, when a stack is more complicated and might need to include other files (i.e. Terraform files, or special configuration files) then we dedicate a repository to the project.
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+Unlike our [Dockerfile](https://gitlab.com/megabyte-labs/templates/docker) repository projects, we do not have a strict repository style guide. There are, however, a few things to keep in mind.
 
-***
+Docker Compose / Stack configurations are supposed to be easy to use, one-liner ways of launching otherwise somewhat complicated networks. So if the repository is not launchable by just running `docker up -d docker-compose.yml` then a file called `launch.sh` should be included in the repository. The `launch.sh` file should make setting up the stack a one-liner process.
 
-# Editing this README
+### Docker Containers
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!).  Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
+If the stack requires containers that are not from reputible sources or if the stack would benefit from having custom Dockerfile container builds then each Dockerfile should have its own repository in the appropriate sub-group in the [Docker group](https://gitlab.com/megabyte-labs/docker). Please also look over the [README of our Dockerfile boilerplate](https://gitlab.com/megabyte-labs/template/docker).
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+### Configuration Management
 
-## Name
-Choose a self-explaining name for your project.
+In order to make the experience truly simple and adhere to the one-liner principle, it may be required to incorporate some sort of configuration management strategy. This should be done by either using Ansible or Terraform. In cases where performance is vital, Saltstack can be used as well.
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+The configuration choices should be thorough and automatically apply the settings that would satisfy the needs of most users. The configurations should make a best-effort at integrating with the other software we include in [Gas Station](https://github.com/megabyte-labs/Gas-Station), [JumpUSB](https://jumpusb.com), and any platform/service that a typical GitHub power-user would have in their stack.
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+That all said, the most important part of the project is to understand and have an intuitive feel for the stack's requirements.
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+### Re-Building the Repository
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+You can begin the project using this repository as a boilerplate. It might also be helpful to check out some of the [other Docker Compose / Stack repositories](https://gitlab.com/megabyte-labs/docker/docker-compose). When you are done creating the stack, be sure to update the repository's metadata and documentation. You can do this by editting the fields in the `blueprint` section of the `package.json` file. After that, edit the documentation by adding your project-specific documentation written in markdown to the `docs/partials/guide.md` file. With the `blueprint` section and the documentation partial populated, you can re-compile the repository by running `bash start.sh && task update`. Be sure to add a custom transparent square `logo.png` to the root of this repository for good measure.
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+And that is all, you are ready to polish this Docker stack and open a pull request.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+{{ load:.config/docs/readme/contributing-details.md }}
+{{ load:.config/docs/readme/license.md }}
