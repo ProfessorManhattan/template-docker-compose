@@ -89,6 +89,7 @@
     "tag": "edge"
   },
   "blueprint": {
+    "boilerplate": true,
     "description": "Starting point / instructions for creating a Docker Compose / Stack repository",
     "group": "docker",
     "name": "Docker Compose / Stack",
