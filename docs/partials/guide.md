@@ -17,3 +17,9 @@ In order to make the experience truly simple and adhere to the one-liner princip
 The configuration choices should be thorough and automatically apply the settings that would satisfy the needs of most users. The configurations should make a best-effort at integrating with the other software we include in [Gas Station](https://github.com/megabyte-labs/Gas-Station), [JumpUSB](https://jumpusb.com), and any platform/service that a typical GitHub power-user would have in their stack.
 
 That all said, the most important part of the project is to understand and have an intuitive feel for the stack's requirements.
+
+### Re-Building the Repository
+
+You can begin the project using this repository as a boilerplate. It might also be helpful to check out some of the [other Docker Compose / Stack repositories](https://gitlab.com/megabyte-labs/docker/docker-compose). When you are done creating the stack, be sure to update the repository's metadata and documentation. You can do this by editting the fields in the `blueprint` section of the `package.json` file. After that, edit the documentation by adding your project-specific documentation written in markdown to the `docs/partials/guide.md` file. With the `blueprint` section and the documentation partial populated, you can re-compile the repository by running `bash start.sh && task update`. Be sure to add a custom transparent square `logo.png` to the root of this repository for good measure.
+
+And that is all, you are ready to polish this Docker stack and open a pull request.
