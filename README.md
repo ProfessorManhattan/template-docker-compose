@@ -50,12 +50,22 @@
 
 ## Table of Contents
 
+- [Docker-Compose Project](#docker-compose-project)
 - [Requirements](#requirements)
   - [Development Requirements](#development-requirements)
 - [Docker Compose / Stack Project](#docker-compose--stack-project)
-  _ [Docker Containers](#docker-containers)
-  _ [Configuration Management](#configuration-management) \* [Re-Building the Repository](#re-building-the-repository)
-  {{ load:.config/docs/readme-docker-compose/overview.md }}
+  - [Docker Containers](#docker-containers)
+  - [Configuration Management](#configuration-management)
+  - [Re-Building the Repository](#re-building-the-repository)
+- [Contributing](#contributing)
+  - [Affiliates](#affiliates)
+- [License](#license)
+
+<a href="#docker-compose-project" style="width:100%"><img style="width:100%" src="https://gitlab.com/megabyte-labs/assets/-/raw/master/png/aqua-divider.png" /></a>
+
+## Docker-Compose Project
+
+This is a Docker Compose / Swarm project.
 
 <a href="#requirements" style="width:100%"><img style="width:100%" src="https://gitlab.com/megabyte-labs/assets/-/raw/master/png/aqua-divider.png" /></a>
 
@@ -102,5 +112,50 @@ You can begin the project using this repository as a boilerplate. It might also 
 
 And that is all, you are ready to polish this Docker stack and open a pull request.
 
-{{ load:.config/docs/readme/contributing-details.md }}
-{{ load:.config/docs/readme/license.md }}
+<a href="#contributing" style="width:100%"><img style="width:100%" src="https://gitlab.com/megabyte-labs/assets/-/raw/master/png/aqua-divider.png" /></a>
+
+## Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/megabyte-labs/template-docker-compose/issues). If you would like to contribute, please take a look at the [contributing guide](https://github.com/megabyte-labs/template-docker-compose/blob/master/docs/CONTRIBUTING.md).
+
+<details>
+<summary><b>Sponsorship</b></summary>
+<br/>
+<blockquote>
+<br/>
+Dear Awesome Person,<br/><br/>
+I create open source projects out of love. Although I have a job, shelter, and as much fast food as I can handle, it would still be pretty cool to be appreciated by the community for something I have spent a lot of time and money on. Please consider sponsoring me! Who knows? Maybe I will be able to quit my job and publish open source full time.
+<br/><br/>Sincerely,<br/><br/>
+
+**_Brian Zalewski_**<br/><br/>
+
+</blockquote>
+
+<a title="Support us on Open Collective" href="https://opencollective.com/megabytelabs" target="_blank">
+  <img alt="Open Collective sponsors" src="https://img.shields.io/opencollective/sponsors/megabytelabs?logo=opencollective&label=OpenCollective&logoColor=white&style=for-the-badge" />
+</a>
+<a title="Support us on GitHub" href="https://github.com/ProfessorManhattan" target="_blank">
+  <img alt="GitHub sponsors" src="https://img.shields.io/github/sponsors/ProfessorManhattan?label=GitHub%20sponsors&logo=github&style=for-the-badge" />
+</a>
+<a href="https://www.patreon.com/ProfessorManhattan" title="Support us on Patreon" target="_blank">
+  <img alt="Patreon" src="https://img.shields.io/badge/Patreon-Support-052d49?logo=patreon&logoColor=white&style=for-the-badge" />
+</a>
+
+### Affiliates
+
+Below you will find a list of services we leverage that offer special incentives for signing up for their services through our special links:
+
+<a href="http://eepurl.com/h3aEdX" title="Sign up for $30 in MailChimp credits" target="_blank">
+  <img alt="MailChimp" src="https://cdn-images.mailchimp.com/monkey_rewards/grow-business-banner-2.png" />
+</a>
+<a href="https://www.digitalocean.com/?refcode=751743d45e36&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge">
+  <img src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg" alt="DigitalOcean Referral Badge" />
+</a>
+
+</details>
+
+<a href="#license" style="width:100%"><img style="width:100%" src="https://gitlab.com/megabyte-labs/assets/-/raw/master/png/aqua-divider.png" /></a>
+
+## License
+
+Copyright © 2020-2021 [Megabyte LLC](https://megabyte.space). This project is [MIT](https://gitlab.com/megabyte-labs/templates/docker-compose/-/blob/master/LICENSE) licensed.
